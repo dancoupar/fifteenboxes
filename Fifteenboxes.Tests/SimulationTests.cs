@@ -223,11 +223,11 @@ namespace Fifteenboxes.Tests
 			int andrewWinScenarios = 0;
 			int barbaraWinScenarios = 0;
 			
-			foreach (char firstPrizeBox in boxes)
+			for (int i = 0; i < boxes.Length; i++)
 			{
-				foreach (char secondPrizeBox in boxes)
+				for (int j = i; j < boxes.Length; j++)
 				{
-					var sut = new Simulation(new SpecificBoxPrizePlacer(firstPrizeBox, secondPrizeBox));
+					var sut = new Simulation(new SpecificBoxPrizePlacer(boxes[i], boxes[j]));
 					sut.Run(1);
 
 					andrewWinScenarios += sut.AndrewWinCount;
@@ -235,7 +235,8 @@ namespace Fifteenboxes.Tests
 				}
 			}
 
-			// 92 vs 84 (and 49 draws, making 225 distinct scenarios i.e. 15 x 15)
+			// Assert
+			// 49 vs 45 (and 26 draws, making 120 distinct scenarios)
 			Assert.True(andrewWinScenarios > barbaraWinScenarios);
 		}
 
@@ -249,6 +250,7 @@ namespace Fifteenboxes.Tests
 			sut.Run(10000000);
 
 			// Assert
+			// The ratio between Andrew's wins to Barbara's is about 1.09, which is 49/45
 			Assert.True(sut.AndrewWinCount > sut.BarbaraWinCount);
 		}
 	}
