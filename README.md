@@ -1,6 +1,6 @@
 # 15 Boxes
 
-I coded this after becoming a bit obsessed with a puzzle that came up on my news feed: https://www.theguardian.com/science/2024/sep/30/did-you-solve-it-the-box-problem-that-baffled-the-boffins
+I coded this after becoming a bit obsessed with a puzzle that came up on my news feed: [https://www.theguardian.com/science/2024/sep/30/did-you-solve-it-the-box-problem-that-baffled-the-boffins](https://www.theguardian.com/science/2024/sep/30/can-you-solve-it-the-box-problem-that-baffled-the-boffins)
 
 The puzzle describes a scenario where two players, Andrew and Barbara, both open boxes in which they hope to find prizes that have been randomly placed. The boxes are arranged in a grid. Andrew opens boxes row by row and Barbara, column by column. It's easy enough to intuitively understand why both Andrew and Barbara have an equal chance of finding a prize first when a prize is randomly placed. What really messes with your head is why this is not also the case with two prizes.
 
